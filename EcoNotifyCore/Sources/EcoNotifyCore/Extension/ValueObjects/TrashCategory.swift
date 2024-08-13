@@ -28,7 +28,7 @@ extension TrashCategory {
         case .notBurnable: .notBurnable
         case .plastic: .plastic
         case .plasticBottle: .plasticBottle
-        case .bottle: .burnable
+        case .bottle: .bottle
         case .newspaper: .newspaper
         case .magazine: .magazine
         case .cardboard: .cardboard

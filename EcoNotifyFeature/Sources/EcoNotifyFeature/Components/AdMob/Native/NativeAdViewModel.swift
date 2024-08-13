@@ -11,15 +11,20 @@ import EcoNotifyEntity
 
 @Observable
 class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate, GADNativeAdDelegate {
+    @MainActor static let shared = NativeAdViewModel()
+    private override init() {
+        super.init()
+    }
+    
     var nativeAd: GADNativeAd?
     private var adLoader: GADAdLoader!
     
     func refreshAd() {
         var adUnitId: String {
             #if DEBUG
-            Constant.AdMob.debug.rawValue
+            Constant.AdMob.Native.debug.rawValue
             #else
-            Constant.AdMob.release.rawValue
+            Constant.AdMob.Native.release.rawValue
             #endif
         }
         adLoader = GADAdLoader(
@@ -31,7 +36,6 @@ class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate, GADNativeAdDelegat
     }
     
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
-        // Native ad data changes are published to its subscribers.
         self.nativeAd = nativeAd
         nativeAd.delegate = self
     }

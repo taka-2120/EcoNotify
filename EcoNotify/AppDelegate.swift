@@ -9,6 +9,7 @@ import SwiftData
 import UIKit
 import GoogleMobileAds
 import EcoNotifyEntity
+import EcoNotifyFeature
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
      func application(

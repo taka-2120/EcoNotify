@@ -8,14 +8,18 @@
 import SwiftUI
 import GoogleMobileAds
 
-private struct NativeAdView: UIViewRepresentable {
+struct NativeAdView: UIViewRepresentable {
     typealias UIViewType = GADNativeAdView
     
     // Observer to update the UIView when the native ad value changes.
     @State var nativeViewModel: NativeAdViewModel
     
+    init(using nativeViewModel: NativeAdViewModel) {
+        self.nativeViewModel = nativeViewModel
+    }
+    
     func makeUIView(context: Context) -> GADNativeAdView {
-        return Bundle.main.loadNibNamed(
+        return Bundle.module.loadNibNamed(
             "NativeAdView",
             owner: nil,
             options: nil)?.first as! GADNativeAdView
@@ -24,10 +28,7 @@ private struct NativeAdView: UIViewRepresentable {
     func updateUIView(_ nativeAdView: GADNativeAdView, context: Context) {
         guard let nativeAd = nativeViewModel.nativeAd else { return }
         
-        // Each UI property is configurable using your native ad.
         (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
-        
-        nativeAdView.mediaView?.mediaContent = nativeAd.mediaContent
         
         (nativeAdView.bodyView as? UILabel)?.text = nativeAd.body
         

@@ -8,88 +8,119 @@
 import SwiftUI
 import SwiftData
 import WidgetKit
+import ActivityKit
+import AppTrackingTransparency
+import GoogleMobileAds
 import EcoNotifyEntity
 import EcoNotifyCore
-import ActivityKit
-
 
 public struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     
     @Query(sort: \Trash.next) private var trashes: [Trash]
     
+    @State private var nativeAdViewModel = NativeAdViewModel.shared
     @State private var isAddSheetShown = false
     @State private var nextCollection: Trash? = nil
+    private let keyWindow = UIApplication.shared.connectedScenes
+        .filter({$0.activationState == .foregroundActive})
+        .map({$0 as? UIWindowScene})
+        .compactMap({$0})
+        .first?.windows
+        .filter({$0.isKeyWindow}).first
     
     public init() {}
 
     public var body: some View {
         NavigationStack {
-            Group {
-                if trashes.isEmpty {
-                    VStack {
-                        Text("empty_collection")
-                            .font(.title3)
-                            .bold()
-                            .multilineTextAlignment(.center)
-                    }
-                } else {
-                    List {
-                        if let nextCollection = nextCollection {
-                            Section {
-                                VStack(alignment: .leading) {
-                                    Text("next_collection")
-                                        .font(.title2)
-                                        .bold()
-                                    HStack(alignment: .center) {
-                                        Image(nextCollection.category.image)
-                                            .resizable()
-                                            .frame(width: 30, height: 30)
-                                        Text(nextCollection.name)
-                                            .font(.title3)
-                                        Spacer()
-                                        Text(nextCollection.next.relativeLabel())
-                                            .foregroundColor(.secondary)
+            ZStack {
+                Group {
+                    if trashes.isEmpty {
+                        VStack {
+                            Spacer()
+                            Text("empty_collection")
+                                .font(.title3)
+                                .bold()
+                                .multilineTextAlignment(.center)
+                            Spacer()
+                            NativeAdView(using: nativeAdViewModel)
+                                .frame(height: 160)
+                                .corner(radius: 10)
+                                .padding()
+                        }
+                    } else {
+                        List {
+                            if let nextCollection = nextCollection {
+                                Section {
+                                    VStack(alignment: .leading) {
+                                        Text("next_collection")
+                                            .font(.title2)
+                                            .bold()
+                                        HStack(alignment: .center) {
+                                            Image(nextCollection.category.image)
+                                                .resizable()
+                                                .frame(width: 30, height: 30)
+                                            Text(nextCollection.name)
+                                                .font(.title3)
+                                            Spacer()
+                                            Text(nextCollection.next.relativeLabel())
+                                                .foregroundColor(.secondary)
+                                        }
+                                        
+                                        if nextCollection.next.isToday {
+                                            Button {
+                                                nextCollection.setNext()
+                                            } label: {
+                                                HStack {
+                                                    Spacer()
+                                                    Text("took_out")
+                                                        .padding(.vertical, 10)
+                                                        .padding(.horizontal, 50)
+                                                        .background(Color.accentColor)
+                                                        .foregroundStyle(.white)
+                                                        .corner()
+                                                    Spacer()
+                                                }
+                                            }
+                                            .buttonStyle(.borderless)
+                                        } else {
+                                            Spacer(minLength: 30)
+                                        }
                                     }
-                                    
-                                    if nextCollection.next.isToday {
+                                    .padding(.top, 5)
+                                    .overlay(alignment: .bottomTrailing) {
                                         Button {
                                             nextCollection.setNext()
                                         } label: {
-                                            HStack {
-                                                Spacer()
-                                                Text("took_out")
-                                                    .padding(.vertical, 10)
-                                                    .padding(.horizontal, 50)
-                                                    .background(Color.accentColor)
-                                                    .foregroundStyle(.white)
-                                                    .corner()
-                                                Spacer()
-                                            }
+                                            Text("skip")
+                                                .padding(10)
                                         }
                                         .buttonStyle(.borderless)
-                                    } else {
-                                        Spacer(minLength: 30)
                                     }
-                                }
-                                .padding(.top, 5)
-                                .overlay(alignment: .bottomTrailing) {
-                                    Button {
-                                        nextCollection.setNext()
-                                    } label: {
-                                        Text("skip")
-                                            .padding(10)
-                                    }
-                                    .buttonStyle(.borderless)
                                 }
                             }
+                            
+                            ForEach(Array(trashes.enumerated()), id: \.offset) { index, trash in
+                                TrashItem(for: trash)
+                            }
+                            .onDelete(perform: deleteItems)
+                            
+                            NativeAdView(using: nativeAdViewModel)
+                                .frame(height: 160)
+                                .listRowInsets(EdgeInsets())
                         }
-                        
-                        ForEach(trashes, id: \.id) { trash in
-                            TrashItem(for: trash)
-                        }
-                        .onDelete(perform: deleteItems)
                     }
+                }
+                .padding(.bottom, 60)
+                
+                VStack(spacing: 0) {
+                    Spacer()
+                    BannerAdView()
+                        .frame(height: 60)
+                    Rectangle()
+                        .fill(.regularMaterial)
+                        .ignoresSafeArea()
+                        .frame(height: keyWindow?.safeAreaInsets.bottom ?? 0)
                 }
             }
             .sheet(isPresented: $isAddSheetShown) {
@@ -105,6 +136,7 @@ public struct ContentView: View {
                 }
             }
             .onAppear {
+                nativeAdViewModel.refreshAd()
                 updateNext()
                 Task { @MainActor in
                     do {
@@ -117,6 +149,7 @@ public struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
+                        .disabled(trashes.isEmpty)
                 }
                 ToolbarItem {
                     Button(action: addItem) {
@@ -125,6 +158,9 @@ public struct ContentView: View {
                 }
             }
             .navigationTitle("title")
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
+            }
         }
     }
 
