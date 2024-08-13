@@ -151,7 +151,7 @@ struct EcoNotifyWidgetEntryView : View {
                 .frame(minWidth: 0, maxWidth: .infinity)
             } else {
                 VStack {
-                    Text("empty_collection")
+                    Text("widget_empty_collection")
                 }
             }
         }
