@@ -29,10 +29,12 @@ public class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate, GADNativeAd
             Constant.AdMob.Native.release.rawValue
             #endif
         }
+        let multipleAdOptions = GADMultipleAdsAdLoaderOptions()
+        multipleAdOptions.numberOfAds = 5;
         adLoader = GADAdLoader(
             adUnitID: adUnitId,
             rootViewController: nil,
-            adTypes: [.native], options: nil)
+            adTypes: [.native], options: [multipleAdOptions])
         adLoader!.delegate = self
         adLoader!.load(GADRequest())
     }
