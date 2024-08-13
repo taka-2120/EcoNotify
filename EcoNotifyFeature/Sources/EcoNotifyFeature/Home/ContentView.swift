@@ -82,6 +82,10 @@ public struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .sheet(isPresented: $isAddSheetShown) {
+                Task { @MainActor in
+                    updateNext()
+                }
+            } content: {
                 DetailsView()
             }
             .refreshable {

@@ -12,9 +12,9 @@ extension TrashCategory {
     public var label: LocalizedStringResource {
         switch self {
         case .burnable: "burnable"
-        case .notBurnable: "notBurnable"
+        case .notBurnable: "not_burnable"
         case .plastic: "plastic"
-        case .plasticBottle: "plasticBottle"
+        case .plasticBottle: "plastic_bottle"
         case .bottle: "bottle"
         case .newspaper: "newspaper"
         case .magazine: "magazine"
