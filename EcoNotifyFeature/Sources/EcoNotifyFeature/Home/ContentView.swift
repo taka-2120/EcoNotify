@@ -25,61 +25,72 @@ public struct ContentView: View {
 
     public var body: some View {
         NavigationStack {
-            List {
-                if let nextCollection = nextCollection {
-                    Section {
-                        VStack(alignment: .leading) {
-                            Text("next_collection")
-                                .font(.title2)
-                                .bold()
-                            HStack(alignment: .center) {
-                                Image(nextCollection.category.image)
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                Text(nextCollection.name)
-                                    .font(.title3)
-                                Spacer()
-                                Text(nextCollection.next.relativeLabel())
-                                    .foregroundColor(.secondary)
-                            }
-                            
-                            if nextCollection.next.isToday {
-                                Button {
-                                    nextCollection.setNext()
-                                } label: {
-                                    HStack {
+            Group {
+                if trashes.isEmpty {
+                    VStack {
+                        Text("empty_collection")
+                            .font(.title3)
+                            .bold()
+                            .multilineTextAlignment(.center)
+                    }
+                } else {
+                    List {
+                        if let nextCollection = nextCollection {
+                            Section {
+                                VStack(alignment: .leading) {
+                                    Text("next_collection")
+                                        .font(.title2)
+                                        .bold()
+                                    HStack(alignment: .center) {
+                                        Image(nextCollection.category.image)
+                                            .resizable()
+                                            .frame(width: 30, height: 30)
+                                        Text(nextCollection.name)
+                                            .font(.title3)
                                         Spacer()
-                                        Text("took_out")
-                                            .padding(.vertical, 10)
-                                            .padding(.horizontal, 50)
-                                            .background(Color.accentColor)
-                                            .foregroundStyle(.white)
-                                            .corner()
-                                        Spacer()
+                                        Text(nextCollection.next.relativeLabel())
+                                            .foregroundColor(.secondary)
+                                    }
+                                    
+                                    if nextCollection.next.isToday {
+                                        Button {
+                                            nextCollection.setNext()
+                                        } label: {
+                                            HStack {
+                                                Spacer()
+                                                Text("took_out")
+                                                    .padding(.vertical, 10)
+                                                    .padding(.horizontal, 50)
+                                                    .background(Color.accentColor)
+                                                    .foregroundStyle(.white)
+                                                    .corner()
+                                                Spacer()
+                                            }
+                                        }
+                                        .buttonStyle(.borderless)
+                                    } else {
+                                        Spacer(minLength: 30)
                                     }
                                 }
-                                .buttonStyle(.borderless)
-                            } else {
-                                Spacer(minLength: 30)
+                                .padding(.top, 5)
+                                .overlay(alignment: .bottomTrailing) {
+                                    Button {
+                                        nextCollection.setNext()
+                                    } label: {
+                                        Text("skip")
+                                            .padding(10)
+                                    }
+                                    .buttonStyle(.borderless)
+                                }
                             }
                         }
-                        .padding(.top, 5)
-                        .overlay(alignment: .bottomTrailing) {
-                            Button {
-                                nextCollection.setNext()
-                            } label: {
-                                Text("skip")
-                                    .padding(10)
-                            }
-                            .buttonStyle(.borderless)
+                        
+                        ForEach(trashes, id: \.id) { trash in
+                            TrashItem(for: trash)
                         }
+                        .onDelete(perform: deleteItems)
                     }
                 }
-                
-                ForEach(trashes, id: \.id) { trash in
-                    TrashItem(for: trash)
-                }
-                .onDelete(perform: deleteItems)
             }
             .sheet(isPresented: $isAddSheetShown) {
                 Task { @MainActor in

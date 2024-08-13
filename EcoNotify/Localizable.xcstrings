@@ -223,17 +223,18 @@
       }
     },
     "empty_collection" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Garbage collection is empty!\nTap to open to add"
+            "value" : "Garbage collection is empty!\nTap “+” to add."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "収集日が追加されていません。\nタップでアプリをニラいて追加できます。"
+            "value" : "収集日が追加されていません。\n“+”をタップして追加できます。"
           }
         }
       }
@@ -957,6 +958,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "もう、ゴミ出しは忘れない。"
+          }
+        }
+      }
+    },
+    "widget_empty_collection" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Garbage collection is empty!\nTap to open to add"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "収集日が追加されていません。\nタップでアプリを開いて追加できます。"
           }
         }
       }
