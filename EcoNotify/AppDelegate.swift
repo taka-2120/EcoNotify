@@ -7,6 +7,7 @@
 
 import SwiftData
 import UIKit
+import GoogleMobileAds
 import EcoNotifyEntity
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         UNUserNotificationCenter.current().delegate = self
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
     
