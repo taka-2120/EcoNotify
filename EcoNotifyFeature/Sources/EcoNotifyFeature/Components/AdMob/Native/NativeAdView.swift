@@ -19,10 +19,13 @@ struct NativeAdView: UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> GADNativeAdView {
-        return Bundle.module.loadNibNamed(
+        guard let adView = Bundle.module.loadNibNamed(
             "NativeAdView",
             owner: nil,
-            options: nil)?.first as! GADNativeAdView
+            options: nil)?.first as? GADNativeAdView else {
+            fatalError("Failed to cast to GADNativeAdView")
+        }
+        return adView
     }
     
     func updateUIView(_ nativeAdView: GADNativeAdView, context: Context) {

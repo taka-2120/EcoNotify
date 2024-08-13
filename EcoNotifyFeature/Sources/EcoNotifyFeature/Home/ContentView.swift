@@ -161,6 +161,11 @@ public struct ContentView: View {
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
                 ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
             }
+            .overlay {
+                if nativeAdViewModel.isLoading {
+                    LoadingView()
+                }
+            }
         }
     }
 

@@ -10,16 +10,18 @@ import GoogleMobileAds
 import EcoNotifyEntity
 
 @Observable
-class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate, GADNativeAdDelegate {
-    @MainActor static let shared = NativeAdViewModel()
+public class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate, GADNativeAdDelegate {
+    @MainActor public static let shared = NativeAdViewModel()
     private override init() {
         super.init()
     }
     
-    var nativeAd: GADNativeAd?
-    private var adLoader: GADAdLoader!
+    public var isLoading = true
+    // TODO: Handle errors occurred
+    internal var nativeAd: GADNativeAd?
+    private var adLoader: GADAdLoader?
     
-    func refreshAd() {
+    internal func refreshAd() {
         var adUnitId: String {
             #if DEBUG
             Constant.AdMob.Native.debug.rawValue
@@ -31,16 +33,19 @@ class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate, GADNativeAdDelegat
             adUnitID: adUnitId,
             rootViewController: nil,
             adTypes: [.native], options: nil)
-        adLoader.delegate = self
-        adLoader.load(GADRequest())
+        adLoader!.delegate = self
+        adLoader!.load(GADRequest())
     }
     
-    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
+    public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
         self.nativeAd = nativeAd
         nativeAd.delegate = self
+        withAnimation {
+            isLoading = false
+        }
     }
     
-    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+    public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
         print("\(adLoader) failed with error: \(error.localizedDescription)")
     }
 }
