@@ -278,7 +278,7 @@ struct DetailsView: View {
         try await NotificationManager.scheduleNotification(
             for: date.id.string,
             title: trash.name,
-            body: "notification_body \(trash.name.lowercased()) \(String(localized: trash.notifyDay.relativeLabel).lowercased())",
+            body: String(localized: "notification_body \(trash.name.lowercased()) \(String(localized: trash.notifyDay.relativeLabel).lowercased())"),
             on: components
         )
     }
