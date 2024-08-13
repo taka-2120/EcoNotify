@@ -9,6 +9,12 @@
             "state" : "translated",
             "value" : "Add"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add a date"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日を追加"
           }
         }
       }
@@ -31,6 +43,12 @@
             "state" : "translated",
             "value" : "Add a Trash Category"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カテゴリを追加"
+          }
         }
       }
     },
@@ -41,6 +59,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "At"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
           }
         }
       }
@@ -53,6 +77,12 @@
             "state" : "translated",
             "value" : "Bottle"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペットボトル"
+          }
         }
       }
     },
@@ -63,6 +93,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Burnable"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "燃えるゴミ"
           }
         }
       }
@@ -75,6 +111,12 @@
             "state" : "translated",
             "value" : "Cancel"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
         }
       }
     },
@@ -85,6 +127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cardboard"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダンボール"
           }
         }
       }
@@ -97,6 +145,12 @@
             "state" : "translated",
             "value" : "Category"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カテゴリ"
+          }
         }
       }
     },
@@ -107,6 +161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Collection Dates"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "収集日"
           }
         }
       }
@@ -119,6 +179,12 @@
             "state" : "translated",
             "value" : "Comment"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コメント"
+          }
         }
       }
     },
@@ -129,6 +195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Edit"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
           }
         }
       }
@@ -141,6 +213,12 @@
             "state" : "translated",
             "value" : "Edit Trash"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイトルを編集"
+          }
         }
       }
     },
@@ -150,6 +228,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Garbage collection is empty!\nTap to open to add"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "収集日が追加されていません。\nタップでアプリをニラいて追加できます。"
           }
         }
       }
@@ -162,6 +246,12 @@
             "state" : "translated",
             "value" : "Error"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラー"
+          }
         }
       }
     },
@@ -172,6 +262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This name is already registered."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この名前はすでに追加されています。"
           }
         }
       }
@@ -184,6 +280,12 @@
             "state" : "translated",
             "value" : "No collection date registered."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "収集日が登録されていません。"
+          }
         }
       }
     },
@@ -194,6 +296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Every"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎週"
           }
         }
       }
@@ -206,6 +314,12 @@
             "state" : "translated",
             "value" : "1st"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第一"
+          }
         }
       }
     },
@@ -217,6 +331,12 @@
             "state" : "translated",
             "value" : "4th"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第四"
+          }
         }
       }
     },
@@ -227,6 +347,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Friday"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "金曜日"
           }
         }
       }
@@ -242,6 +368,12 @@
             "state" : "translated",
             "value" : "Information"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "情報"
+          }
         }
       }
     },
@@ -252,6 +384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Key"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キー"
           }
         }
       }
@@ -264,6 +402,12 @@
             "state" : "translated",
             "value" : "Magazine"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雑誌"
+          }
         }
       }
     },
@@ -274,6 +418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Monday"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曜日"
           }
         }
       }
@@ -286,6 +436,12 @@
             "state" : "translated",
             "value" : "Name"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前"
+          }
         }
       }
     },
@@ -296,6 +452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Newspaper"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新聞紙"
           }
         }
       }
@@ -308,6 +470,12 @@
             "state" : "translated",
             "value" : "Next collection"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次の収集"
+          }
         }
       }
     },
@@ -318,6 +486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Next: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次回収集: %@"
           }
         }
       }
@@ -330,6 +504,12 @@
             "state" : "translated",
             "value" : "None"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なし"
+          }
         }
       }
     },
@@ -340,6 +520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not burnable"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "燃えないごみ"
           }
         }
       }
@@ -352,10 +538,16 @@
             "state" : "translated",
             "value" : "Notifications"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知"
+          }
         }
       }
     },
-    "notification_body %1$@ %2$@" : {
+    "notification_body %@ %@" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -363,11 +555,17 @@
             "state" : "translated",
             "value" : "It's time to take out the %1$@ trash %2$@."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@の収集日は%@です。"
+          }
         }
       }
     },
     "Notify Collection" : {
-
+      "shouldTranslate" : false
     },
     "notify_me" : {
       "extractionState" : "manual",
@@ -376,6 +574,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notify me"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知"
           }
         }
       }
@@ -388,6 +592,12 @@
             "state" : "translated",
             "value" : "1 day before"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日前"
+          }
         }
       }
     },
@@ -398,6 +608,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "On the day"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当日"
           }
         }
       }
@@ -410,6 +626,12 @@
             "state" : "translated",
             "value" : "Plastic"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プラスチック"
+          }
         }
       }
     },
@@ -420,6 +642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plastic bottle"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペットボトル"
           }
         }
       }
@@ -432,6 +660,12 @@
             "state" : "translated",
             "value" : "Saturday"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "土曜日"
+          }
         }
       }
     },
@@ -442,6 +676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
           }
         }
       }
@@ -454,6 +694,12 @@
             "state" : "translated",
             "value" : "2nd"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第二"
+          }
         }
       }
     },
@@ -463,6 +709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skip"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップ"
           }
         }
       }
@@ -475,6 +727,12 @@
             "state" : "translated",
             "value" : "Sunday"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日曜日"
+          }
         }
       }
     },
@@ -486,11 +744,17 @@
             "state" : "translated",
             "value" : "3rd"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第三"
+          }
         }
       }
     },
     "This widget notify you on the day your garbage collection." : {
-
+      "shouldTranslate" : false
     },
     "threeDaysBefore" : {
       "extractionState" : "manual",
@@ -499,6 +763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3 days before"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3日前"
           }
         }
       }
@@ -511,6 +781,12 @@
             "state" : "translated",
             "value" : "3 days later"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3日後"
+          }
         }
       }
     },
@@ -521,6 +797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thursday"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "木曜日"
           }
         }
       }
@@ -533,6 +815,12 @@
             "state" : "translated",
             "value" : "Garbage Collections"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ごみ収集一覧"
+          }
         }
       }
     },
@@ -543,6 +831,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Today"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日"
           }
         }
       }
@@ -555,6 +849,12 @@
             "state" : "translated",
             "value" : "Tomorrow"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明日"
+          }
         }
       }
     },
@@ -564,6 +864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Took out"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゴミ出し済み"
           }
         }
       }
@@ -579,6 +885,12 @@
             "state" : "translated",
             "value" : "Tuesday"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火曜日"
+          }
         }
       }
     },
@@ -589,6 +901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2 days before"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2日前"
           }
         }
       }
@@ -601,6 +919,12 @@
             "state" : "translated",
             "value" : "2 days later"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2日後"
+          }
         }
       }
     },
@@ -612,6 +936,12 @@
             "state" : "translated",
             "value" : "Wednesday"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "水曜日"
+          }
         }
       }
     },
@@ -622,6 +952,12 @@
             "state" : "translated",
             "value" : "Never forget to take out garbage."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう、ゴミ出しは忘れない。"
+          }
         }
       }
     },
@@ -631,6 +967,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Garbage Collection"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ごみ収集"
           }
         }
       }
