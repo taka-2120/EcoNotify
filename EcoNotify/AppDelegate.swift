@@ -7,7 +7,10 @@
 
 import SwiftData
 import UIKit
+import GoogleMobileAds
 import EcoNotifyEntity
+import EcoNotifyFeature
+import AdSupport
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
      func application(
@@ -15,6 +18,11 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         UNUserNotificationCenter.current().delegate = self
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        #if DEBUG
+        print("Ad ID: \(ASIdentifierManager().advertisingIdentifier)")
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "0f12b09445d466d449ae6664d265a123" ]
+        #endif
         return true
     }
     

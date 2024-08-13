@@ -22,6 +22,7 @@ struct DetailsView: View {
     @Environment(\.modelContext) private var modelContext
     
     @Query private var trashes: [Trash]
+    @State private var nativeAdViewModel = NativeAdViewModel.shared
     @State private var category: TrashCategory = .burnable
     @State private var name = ""
     @State private var collectionDates = [CollectionDate]()
@@ -72,6 +73,10 @@ struct DetailsView: View {
                             .foregroundStyle(.red)
                     }
                 }
+                
+                NativeAdView(using: nativeAdViewModel)
+                    .frame(height: 160)
+                    .listRowInsets(EdgeInsets())
                 
                 Section("collection_dates") {
                     ForEach(Array(collectionDates.enumerated()), id: \.offset) { index, date in
@@ -137,6 +142,10 @@ struct DetailsView: View {
                             .multilineTextAlignment(.trailing)
                     }
                 }
+                
+                NativeAdView(using: nativeAdViewModel)
+                    .frame(height: 160)
+                    .listRowInsets(EdgeInsets())
             }
             .navigationTitle(mode == .add ? "add_title" : "edit_title")
             .navigationBarTitleDisplayMode(.inline)
@@ -164,6 +173,7 @@ struct DetailsView: View {
                             } else {
                                 await update()
                             }
+                            
                             WidgetCenter.shared.reloadAllTimelines()
                             dismiss()
                         }
