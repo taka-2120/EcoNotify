@@ -22,6 +22,7 @@ struct DetailsView: View {
     @Environment(\.modelContext) private var modelContext
     
     @Query private var trashes: [Trash]
+    @State private var iapManager = IAPManager.shared
     @State private var nativeAdViewModel = NativeAdViewModel.shared
     @State private var category: TrashCategory = .burnable
     @State private var name = ""
@@ -74,9 +75,11 @@ struct DetailsView: View {
                     }
                 }
                 
-                NativeAdView(using: nativeAdViewModel)
-                    .frame(height: 160)
-                    .listRowInsets(EdgeInsets())
+                if !iapManager.isAdsRemoved {
+                    NativeAdView(using: nativeAdViewModel)
+                        .frame(height: 160)
+                        .listRowInsets(EdgeInsets())
+                }
                 
                 Section("collection_dates") {
                     ForEach(Array(collectionDates.enumerated()), id: \.offset) { index, date in
@@ -143,9 +146,11 @@ struct DetailsView: View {
                     }
                 }
                 
-                NativeAdView(using: nativeAdViewModel)
-                    .frame(height: 160)
-                    .listRowInsets(EdgeInsets())
+                if !iapManager.isAdsRemoved {
+                    NativeAdView(using: nativeAdViewModel)
+                        .frame(height: 160)
+                        .listRowInsets(EdgeInsets())
+                }
             }
             .navigationTitle(mode == .add ? "add_title" : "edit_title")
             .navigationBarTitleDisplayMode(.inline)

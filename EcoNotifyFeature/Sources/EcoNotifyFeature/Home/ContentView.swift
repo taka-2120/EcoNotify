@@ -18,9 +18,11 @@ public struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     
     @Query(sort: \Trash.next) private var trashes: [Trash]
-    
+    @State private var iapManager = IAPManager.shared
     @State private var nativeAdViewModel = NativeAdViewModel.shared
     @State private var isAddSheetShown = false
+    @State private var isSettingsSheetShown = false
+    @State private var isLoading = true
     @State private var nextCollection: Trash? = nil
     private let keyWindow = UIApplication.shared.connectedScenes
         .filter({$0.activationState == .foregroundActive})
@@ -43,11 +45,14 @@ public struct ContentView: View {
                                 .bold()
                                 .multilineTextAlignment(.center)
                             Spacer()
-                            NativeAdView(using: nativeAdViewModel)
-                                .frame(height: 160)
-                                .corner(radius: 10)
-                                .padding()
+                            if !iapManager.isAdsRemoved {
+                                NativeAdView(using: nativeAdViewModel)
+                                    .frame(height: 160)
+                                    .corner(radius: 10)
+                                    .padding()
+                            }
                         }
+                        .frame(minWidth: 0, maxWidth: .infinity)
                     } else {
                         List {
                             if let nextCollection = nextCollection {
@@ -105,22 +110,26 @@ public struct ContentView: View {
                             }
                             .onDelete(perform: deleteItems)
                             
-                            NativeAdView(using: nativeAdViewModel)
-                                .frame(height: 160)
-                                .listRowInsets(EdgeInsets())
+                            if !iapManager.isAdsRemoved {
+                                NativeAdView(using: nativeAdViewModel)
+                                    .frame(height: 160)
+                                    .listRowInsets(EdgeInsets())
+                            }
                         }
                     }
                 }
-                .padding(.bottom, 60)
+                .padding(.bottom, iapManager.isAdsRemoved ? 0 : 60)
                 
-                VStack(spacing: 0) {
-                    Spacer()
-                    BannerAdView()
-                        .frame(height: 60)
-                    Rectangle()
-                        .fill(.regularMaterial)
-                        .ignoresSafeArea()
-                        .frame(height: keyWindow?.safeAreaInsets.bottom ?? 0)
+                if !iapManager.isAdsRemoved {
+                    VStack(spacing: 0) {
+                        Spacer()
+                        BannerAdView()
+                            .frame(height: 60)
+                        Rectangle()
+                            .fill(.regularMaterial)
+                            .ignoresSafeArea()
+                            .frame(height: keyWindow?.safeAreaInsets.bottom ?? 0)
+                    }
                 }
             }
             .sheet(isPresented: $isAddSheetShown) {
@@ -130,23 +139,39 @@ public struct ContentView: View {
             } content: {
                 DetailsView()
             }
+            .sheet(isPresented: $isSettingsSheetShown) {
+                SettingsView()
+            }
             .refreshable {
                 Task { @MainActor in
                     updateNext()
                 }
             }
             .onAppear {
-                nativeAdViewModel.refreshAd()
-                updateNext()
                 Task { @MainActor in
                     do {
+                        isLoading = true
+                        try await iapManager.retrieveProducts()
+                        await iapManager.updatePurchasedProducts()
+                        if !iapManager.isAdsRemoved {
+                            nativeAdViewModel.isLoading = true
+                            nativeAdViewModel.refreshAd()
+                        }
+                        updateNext()
                         try await NotificationManager.request()
+                        isLoading = false
                     } catch {
                         print(error)
                     }
                 }
             }
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: showSettingsSheet) {
+                        Image(systemName: "gearshape")
+                    }
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                         .disabled(trashes.isEmpty)
@@ -162,7 +187,7 @@ public struct ContentView: View {
                 ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
             }
             .overlay {
-                if nativeAdViewModel.isLoading {
+                if nativeAdViewModel.isLoading || isLoading {
                     LoadingView()
                 }
             }
@@ -171,6 +196,10 @@ public struct ContentView: View {
 
     private func addItem() {
         isAddSheetShown.toggle()
+    }
+    
+    private func showSettingsSheet() {
+        isSettingsSheetShown.toggle()
     }
     
     private func updateNext() {

@@ -20,4 +20,8 @@ public enum Constant {
             case debug = "ca-app-pub-3940256099942544/2435281174"
         }
     }
+    
+    public enum ProductId: String, CaseIterable {
+        case removeAds = "yutakahashi.EcoNotify.RemoveAds"
+    }
 }
