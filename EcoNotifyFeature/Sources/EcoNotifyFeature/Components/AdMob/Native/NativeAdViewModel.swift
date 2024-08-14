@@ -16,7 +16,7 @@ public class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate, GADNativeAd
         super.init()
     }
     
-    public var isLoading = true
+    public var isLoading = false
     // TODO: Handle errors occurred
     internal var nativeAd: GADNativeAd?
     private var adLoader: GADAdLoader?

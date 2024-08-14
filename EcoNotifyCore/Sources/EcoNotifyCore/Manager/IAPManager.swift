@@ -23,14 +23,6 @@ public class IAPManager {
     
     private init() {
         updates = observeTransactionUpdates()
-        Task {
-            do {
-                await updatePurchasedProducts()
-                try await retrieveProducts()
-            } catch {
-                print(error)
-            }
-        }
     }
 
     deinit {
@@ -80,7 +72,7 @@ public class IAPManager {
         }
     }
     
-    private func updatePurchasedProducts() async {
+    public func updatePurchasedProducts() async {
         var purchasedProductIds = Set<String>()
         
         for await result in Transaction.currentEntitlements {

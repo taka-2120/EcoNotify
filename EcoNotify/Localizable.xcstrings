@@ -704,6 +704,23 @@
         }
       }
     },
+    "redeem_code" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redeem code"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コードを入力"
+          }
+        }
+      }
+    },
     "remove_ads" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -800,7 +817,7 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "設定"
           }
         }

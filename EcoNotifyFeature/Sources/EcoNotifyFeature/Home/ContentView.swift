@@ -22,6 +22,7 @@ public struct ContentView: View {
     @State private var nativeAdViewModel = NativeAdViewModel.shared
     @State private var isAddSheetShown = false
     @State private var isSettingsSheetShown = false
+    @State private var isLoading = true
     @State private var nextCollection: Trash? = nil
     private let keyWindow = UIApplication.shared.connectedScenes
         .filter({$0.activationState == .foregroundActive})
@@ -51,6 +52,7 @@ public struct ContentView: View {
                                     .padding()
                             }
                         }
+                        .frame(minWidth: 0, maxWidth: .infinity)
                     } else {
                         List {
                             if let nextCollection = nextCollection {
@@ -146,13 +148,18 @@ public struct ContentView: View {
                 }
             }
             .onAppear {
-                if !iapManager.isAdsRemoved {
-                    nativeAdViewModel.refreshAd()
-                }
-                updateNext()
                 Task { @MainActor in
                     do {
+                        isLoading = true
+                        try await iapManager.retrieveProducts()
+                        await iapManager.updatePurchasedProducts()
+                        if !iapManager.isAdsRemoved {
+                            nativeAdViewModel.isLoading = true
+                            nativeAdViewModel.refreshAd()
+                        }
+                        updateNext()
                         try await NotificationManager.request()
+                        isLoading = false
                     } catch {
                         print(error)
                     }
@@ -180,7 +187,7 @@ public struct ContentView: View {
                 ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
             }
             .overlay {
-                if nativeAdViewModel.isLoading {
+                if nativeAdViewModel.isLoading || isLoading {
                     LoadingView()
                 }
             }

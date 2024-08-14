@@ -15,6 +15,7 @@ struct SettingsView: View {
     @State private var iapManager = IAPManager.shared
     @State private var country = ""
     @State private var prefecture = ""
+    @State private var isOfferCodeSheetShown = false
     private var removeAds: Product? {
         return iapManager.products.filter { $0.id == Constant.ProductId.removeAds.rawValue }.first
     }
@@ -71,7 +72,18 @@ struct SettingsView: View {
                                 } label: {
                                     HStack {
                                         Spacer()
-                                        Text("restore_purchase")
+                                        Label("restore_purchase", systemImage: "arrow.clockwise")
+                                        Spacer()
+                                    }
+                                }
+                                .buttonStyle(.borderless)
+                                
+                                Button {
+                                    isOfferCodeSheetShown.toggle()
+                                } label: {
+                                    HStack {
+                                        Spacer()
+                                        Label("redeem_code", systemImage: "ticket.fill")
                                         Spacer()
                                     }
                                 }
@@ -102,6 +114,7 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("settings")
+            .offerCodeRedemption(isPresented: $isOfferCodeSheetShown)
         }
     }
 }

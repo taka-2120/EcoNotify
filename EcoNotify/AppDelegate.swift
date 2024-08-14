@@ -17,8 +17,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
-        UNUserNotificationCenter.current().delegate = self
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        UNUserNotificationCenter.current().delegate = self
         #if DEBUG
         print("Ad ID: \(ASIdentifierManager().advertisingIdentifier)")
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "d8f772976c775a39035234004090b007" ]
