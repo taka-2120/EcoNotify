@@ -25,6 +25,9 @@
 		9AD3B9EE2C4CB4AB000FC3CC /* EcoNotifyEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 9AD3B9ED2C4CB4AB000FC3CC /* EcoNotifyEntity */; };
 		9AD3B9F02C4CB4B9000FC3CC /* EcoNotifyEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 9AD3B9EF2C4CB4B9000FC3CC /* EcoNotifyEntity */; };
 		9AD3B9F52C4CC039000FC3CC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC24DA2C3F8A8E00F148AA /* Localizable.xcstrings */; };
+		9AD6F8BD2C6B855800FC0202 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD6F8BC2C6B855800FC0202 /* StoreKit.framework */; };
+		9AD6F8C32C6B88D900FC0202 /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9AD6F8C22C6B88D900FC0202 /* Products.storekit */; };
+		9AD6F8C42C6B88D900FC0202 /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 9AD6F8C22C6B88D900FC0202 /* Products.storekit */; };
 		9AEC24AD2C3F624900F148AA /* EcoNotifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC24AC2C3F624900F148AA /* EcoNotifyApp.swift */; };
 		9AEC24B32C3F624B00F148AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC24B22C3F624B00F148AA /* Assets.xcassets */; };
 		9AEC24B62C3F624B00F148AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC24B52C3F624B00F148AA /* Preview Assets.xcassets */; };
@@ -93,6 +96,8 @@
 		9A88FE4C2C490B190014BBC0 /* EcoNotifyDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyDebug.entitlements; sourceTree = "<group>"; };
 		9A88FE4D2C49173B0014BBC0 /* EcoNotifyWidgetExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyWidgetExtensionDebug.entitlements; sourceTree = "<group>"; };
 		9AD3B9E62C4CB453000FC3CC /* EcoNotifyEntity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EcoNotifyEntity; sourceTree = "<group>"; };
+		9AD6F8BC2C6B855800FC0202 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9AD6F8C22C6B88D900FC0202 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		9AE88B6C2C48F1C500B9BC84 /* EcoNotifyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9AE88B6D2C49047200B9BC84 /* EcoNotifyCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EcoNotifyCore; sourceTree = "<group>"; };
 		9AE88B702C49048600B9BC84 /* EcoNotifyFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EcoNotifyFeature; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 			files = (
 				9A8B812B2C6AFE9600B31694 /* GoogleMobileAds in Frameworks */,
 				9AD3B9EC2C4CB48E000FC3CC /* EcoNotifyEntity in Frameworks */,
+				9AD6F8BD2C6B855800FC0202 /* StoreKit.framework in Frameworks */,
 				9A88FE452C49075B0014BBC0 /* EcoNotifyFeature in Frameworks */,
 				9A88FE422C49073D0014BBC0 /* EcoNotifyCore in Frameworks */,
 			);
@@ -184,6 +190,7 @@
 		9A11DB2C2C48BF3B00306012 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AD6F8BC2C6B855800FC0202 /* StoreKit.framework */,
 				9AE88B732C4904FE00B9BC84 /* Package.swift */,
 				9A11DB2D2C48BF3B00306012 /* WidgetKit.framework */,
 				9A11DB2F2C48BF3B00306012 /* SwiftUI.framework */,
@@ -194,6 +201,7 @@
 		9AEC24A02C3F624900F148AA = {
 			isa = PBXGroup;
 			children = (
+				9AD6F8C22C6B88D900FC0202 /* Products.storekit */,
 				9A4A2F4F2C4C9CA90011AE77 /* EcoNotifyActivityExtensionRelease.entitlements */,
 				9A4A2F4E2C4C9C9D0011AE77 /* EcoNotifyActivityExtensionDebug.entitlements */,
 				9A88FE4D2C49173B0014BBC0 /* EcoNotifyWidgetExtensionDebug.entitlements */,
@@ -434,6 +442,7 @@
 			files = (
 				9AD3B9E92C4CB453000FC3CC /* EcoNotifyEntity in Resources */,
 				9A4A2F4D2C4C9C370011AE77 /* EcoNotifyCore in Resources */,
+				9AD6F8C32C6B88D900FC0202 /* Products.storekit in Resources */,
 				9A2E0E012C4926910085698C /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD6F8C42C6B88D900FC0202 /* Products.storekit in Resources */,
 				9AEC24B62C3F624B00F148AA /* Preview Assets.xcassets in Resources */,
 				9AEC24B32C3F624B00F148AA /* Assets.xcassets in Resources */,
 				9AEC24DB2C3F8A8E00F148AA /* Localizable.xcstrings in Resources */,
@@ -558,7 +568,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yutakahashi.EcoNotify.debug.EcoNotifyWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -590,7 +600,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yutakahashi.EcoNotify.EcoNotifyWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -622,7 +632,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yutakahashi.EcoNotify.debug.EcoNotifyActivity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -651,7 +661,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yutakahashi.EcoNotify.EcoNotifyActivity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -799,6 +809,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
 				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = NO;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -836,10 +847,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EcoNotify/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Eco Notify";
+				INFOPLIST_KEY_CFBundleDisplayName = "Eco Notify Dev";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
 				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = NO;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -852,7 +864,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = yutakahashi.EcoNotify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
