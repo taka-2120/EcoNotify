@@ -17,7 +17,7 @@ struct SettingsView: View {
     @State private var prefecture = ""
     @State private var isOfferCodeSheetShown = false
     private var removeAds: Product? {
-        return iapManager.products.filter { $0.id == Constant.ProductId.removeAds.rawValue }.first
+        return iapManager.purchased(for: Constant.ProductId.removeAds.rawValue)
     }
     
     var body: some View {
@@ -33,7 +33,7 @@ struct SettingsView: View {
                 if let removeAds = removeAds {
                     Section {
                         HStack {
-                            Label("remove_ads", systemImage: "megaphone.fill")
+                            Label("remove_ads", systemImage: "megaphone")
                             Spacer()
                             if iapManager.isAdsRemoved {
                                 Text("purchased")
@@ -67,7 +67,11 @@ struct SettingsView: View {
                                 
                                 Button {
                                     Task { @MainActor in
-                                        await iapManager.restorePurchases()
+                                        do {
+                                            try await iapManager.restorePurchases()
+                                        } catch {
+                                            print(error)
+                                        }
                                     }
                                 } label: {
                                     HStack {
@@ -83,7 +87,7 @@ struct SettingsView: View {
                                 } label: {
                                     HStack {
                                         Spacer()
-                                        Label("redeem_code", systemImage: "ticket.fill")
+                                        Label("redeem_code", systemImage: "ticket")
                                         Spacer()
                                     }
                                 }
@@ -94,20 +98,26 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    Button {
-                        
+                    NavigationLink {
+                        LicensesView()
                     } label: {
-                        Label("license", systemImage: "text.quote")
+                        Label("licenses", systemImage: "text.quote")
                     }
                     
-                    Button {
-                        
+                    NavigationLink {
+                        CreditsView()
+                    } label: {
+                        Label("credits", systemImage: "bookmark")
+                    }
+                    
+                    NavigationLink {
+                        AboutView()
                     } label: {
                         Label("about", systemImage: "app.badge")
                     }
 
                     HStack {
-                        Label("version", systemImage: "info.circle.fill")
+                        Label("version", systemImage: "info.circle")
                         Spacer()
                         Text("1.0.0")
                     }

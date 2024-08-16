@@ -11,6 +11,8 @@
 		9A11DB302C48BF3B00306012 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A11DB2F2C48BF3B00306012 /* SwiftUI.framework */; };
 		9A11DB412C48BF3D00306012 /* EcoNotifyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9A11DB2B2C48BF3B00306012 /* EcoNotifyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A2E0E012C4926910085698C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC24DA2C3F8A8E00F148AA /* Localizable.xcstrings */; };
+		9A378D402C6F5CAC00B94EBB /* GoogleUserMessagingPlatform.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A378D3F2C6F5CAC00B94EBB /* GoogleUserMessagingPlatform.txt */; };
+		9A378D412C6F5CAC00B94EBB /* GoogleMobileAds.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A378D3E2C6F5CAC00B94EBB /* GoogleMobileAds.txt */; };
 		9A3F61AE2C56A33200119DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3F61AD2C56A32F00119DB2 /* AppDelegate.swift */; };
 		9A4A2F352C4C9ABB0011AE77 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A11DB2D2C48BF3B00306012 /* WidgetKit.framework */; };
 		9A4A2F362C4C9ABB0011AE77 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A11DB2F2C48BF3B00306012 /* SwiftUI.framework */; };
@@ -89,6 +91,8 @@
 		9A11DB2F2C48BF3B00306012 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9A11DB482C48BFDE00306012 /* EcoNotify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotify.entitlements; sourceTree = "<group>"; };
 		9A11DB4D2C48EF4900306012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9A378D3E2C6F5CAC00B94EBB /* GoogleMobileAds.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GoogleMobileAds.txt; sourceTree = "<group>"; };
+		9A378D3F2C6F5CAC00B94EBB /* GoogleUserMessagingPlatform.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GoogleUserMessagingPlatform.txt; sourceTree = "<group>"; };
 		9A3F61AD2C56A32F00119DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4A2F342C4C9ABB0011AE77 /* EcoNotifyActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EcoNotifyActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4A2F4E2C4C9C9D0011AE77 /* EcoNotifyActivityExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyActivityExtensionDebug.entitlements; sourceTree = "<group>"; };
@@ -198,6 +202,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A378D3D2C6F5CA500B94EBB /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				9A378D3E2C6F5CAC00B94EBB /* GoogleMobileAds.txt */,
+				9A378D3F2C6F5CAC00B94EBB /* GoogleUserMessagingPlatform.txt */,
+			);
+			path = Licenses;
+			sourceTree = "<group>";
+		};
 		9AEC24A02C3F624900F148AA = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +254,7 @@
 				9A11DB4D2C48EF4900306012 /* Info.plist */,
 				9AEC24DA2C3F8A8E00F148AA /* Localizable.xcstrings */,
 				9AEC24B22C3F624B00F148AA /* Assets.xcassets */,
+				9A378D3D2C6F5CA500B94EBB /* Licenses */,
 				9AEC24B42C3F624B00F148AA /* Preview Content */,
 			);
 			path = EcoNotify;
@@ -460,6 +474,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD6F8C42C6B88D900FC0202 /* Products.storekit in Resources */,
+				9A378D402C6F5CAC00B94EBB /* GoogleUserMessagingPlatform.txt in Resources */,
+				9A378D412C6F5CAC00B94EBB /* GoogleMobileAds.txt in Resources */,
 				9AEC24B62C3F624B00F148AA /* Preview Assets.xcassets in Resources */,
 				9AEC24B32C3F624B00F148AA /* Assets.xcassets in Resources */,
 				9AEC24DB2C3F8A8E00F148AA /* Localizable.xcstrings in Resources */,
@@ -829,6 +845,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -871,6 +888,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
