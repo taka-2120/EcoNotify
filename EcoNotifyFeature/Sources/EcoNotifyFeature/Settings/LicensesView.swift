@@ -6,31 +6,25 @@
 //
 
 import SwiftUI
+import EcoNotifyEntity
+import EcoNotifyCore
 
 struct LicensesView: View {
     var body: some View {
         List {
-            flaticonLink(for: "fire")
-            flaticonLink(for: "waste")
-            flaticonLink(for: "water bottle")
-            flaticonLink(for: "box")
-            flaticonLink(for: "soda")
-            flaticonLink(for: "wine bottle")
-            flaticonLink(for: "news")
-            flaticonLink(for: "magazine")
-            flaticonLink(for: "tweet")
-            flaticonLink(for: "github")
+            ForEach(Licenses.allCases, id: \.self) { license in
+                NavigationLink {
+                    ScrollView {
+                        Text(license.data)
+                            .padding()
+                    }
+                    .navigationTitle(license.rawValue)
+                } label: {
+                    Text(license.rawValue)
+                }
+            }
         }
         .navigationTitle("licenses")
-    }
-    
-    private func flaticonLink(for title: String) -> some View {
-        Link(
-            "\(title.capitalized) icons created by Freepik - Flaticon",
-            destination: URL(
-                string: "https://www.flaticon.com/free-icons/\(title.lowercased().replacingOccurrences(of: " ", with: "-"))"
-            )!
-        )
     }
 }
 
