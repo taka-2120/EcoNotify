@@ -24,4 +24,11 @@ public enum Constant {
     public enum ProductId: String, CaseIterable {
         case removeAds = "yutakahashi.EcoNotify.RemoveAds"
     }
+    
+    public enum URL: String {
+        case x = "https://x.com/yutk_941"
+        case github = "https://github.com/taka-2120"
+        case portfolio = "https://yu-dev.vercel.app/"
+        case buyMeACoffee = "buymeacoffee.com/yutakahashi"
+    }
 }

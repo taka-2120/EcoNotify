@@ -116,6 +116,11 @@ public struct ContentView: View {
                                     .listRowInsets(EdgeInsets())
                             }
                         }
+                        .refreshable {
+                            Task { @MainActor in
+                                updateNext()
+                            }
+                        }
                     }
                 }
                 .padding(.bottom, iapManager.isAdsRemoved ? 0 : 60)
@@ -142,17 +147,11 @@ public struct ContentView: View {
             .sheet(isPresented: $isSettingsSheetShown) {
                 SettingsView()
             }
-            .refreshable {
-                Task { @MainActor in
-                    updateNext()
-                }
-            }
             .onAppear {
                 Task { @MainActor in
                     do {
                         isLoading = true
-                        try await iapManager.retrieveProducts()
-                        await iapManager.updatePurchasedProducts()
+                        try await iapManager.fetchProducts()
                         if !iapManager.isAdsRemoved {
                             nativeAdViewModel.isLoading = true
                             nativeAdViewModel.refreshAd()
