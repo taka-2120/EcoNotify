@@ -18,6 +18,23 @@
         }
       }
     },
+    "about_developer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About developer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開発者について"
+          }
+        }
+      }
+    },
     "add" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -82,6 +99,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : " "
+          }
+        }
+      }
+    },
+    "bmc_notes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you want to support the development, would you please buy me just one coffee. A small tip can be a big motivation for me. "
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このアプリの開発を支援してくださる方へ、一杯のコーヒーを恵んでくださいませんか？"
           }
         }
       }
@@ -222,6 +256,40 @@
         }
       }
     },
+    "credits" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Credits"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クレジット"
+          }
+        }
+      }
+    },
+    "developer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開発者"
+          }
+        }
+      }
+    },
     "edit" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -341,6 +409,23 @@
         }
       }
     },
+    "features" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Features"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "機能"
+          }
+        }
+      }
+    },
     "first" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -412,13 +497,13 @@
         }
       }
     },
-    "license" : {
+    "licenses" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "License"
+            "value" : "Licenses"
           }
         },
         "ja" : {
@@ -687,6 +772,23 @@
         }
       }
     },
+    "portfolio" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Portfolio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポートフォリオ"
+          }
+        }
+      }
+    },
     "purchased" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -717,6 +819,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "コードを入力"
+          }
+        }
+      }
+    },
+    "release_notes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Release notes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リリースノート"
           }
         }
       }
@@ -1044,6 +1163,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2日後"
+          }
+        }
+      }
+    },
+    "upcoming_features" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upcoming features"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加予定の機能"
           }
         }
       }
