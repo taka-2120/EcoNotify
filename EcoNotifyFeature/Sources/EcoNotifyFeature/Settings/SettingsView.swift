@@ -17,7 +17,7 @@ struct SettingsView: View {
     @State private var prefecture = ""
     @State private var isOfferCodeSheetShown = false
     private var removeAds: Product? {
-        return iapManager.purchased(for: Constant.ProductId.removeAds.rawValue)
+        return iapManager.getProduct(for: Constant.ProductId.removeAds.rawValue)
     }
     
     var body: some View {

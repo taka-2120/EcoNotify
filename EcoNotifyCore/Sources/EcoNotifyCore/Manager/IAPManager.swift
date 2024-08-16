@@ -46,6 +46,10 @@ public class IAPManager {
         purchasedProductIds = try await iapService.restorePurchases()
     }
     
+    public func getProduct(for id: String) -> Product? {
+        products.first(where: { $0.id == id })
+    }
+    
     public func purchased(for id: String) -> Product? {
         purchasedProductIds.contains(id)
         ? products.first(where: { $0.id == id })

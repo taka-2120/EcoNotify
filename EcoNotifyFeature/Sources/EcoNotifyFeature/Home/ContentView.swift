@@ -24,6 +24,8 @@ public struct ContentView: View {
     @State private var isSettingsSheetShown = false
     @State private var isLoading = true
     @State private var nextCollection: Trash? = nil
+    @State private var isSkipAlertShown = false
+    @State private var isTookOutAlertShown = false
     private let keyWindow = UIApplication.shared.connectedScenes
         .filter({$0.activationState == .foregroundActive})
         .map({$0 as? UIWindowScene})
@@ -74,7 +76,7 @@ public struct ContentView: View {
                                         
                                         if nextCollection.next.isToday {
                                             Button {
-                                                nextCollection.setNext()
+                                                isTookOutAlertShown.toggle()
                                             } label: {
                                                 HStack {
                                                     Spacer()
@@ -95,13 +97,29 @@ public struct ContentView: View {
                                     .padding(.top, 5)
                                     .overlay(alignment: .bottomTrailing) {
                                         Button {
-                                            nextCollection.setNext()
+                                            isSkipAlertShown.toggle()
                                         } label: {
                                             Text("skip")
                                                 .padding(10)
                                         }
                                         .buttonStyle(.borderless)
                                     }
+                                }
+                                .alert("confirmation", isPresented: $isSkipAlertShown) {
+                                    Button("no", role: .cancel) { }
+                                    Button("yes") {
+                                        nextCollection.setNext()
+                                    }
+                                } message: {
+                                    Text("skip_confirmation")
+                                }
+                                .alert("confirmation", isPresented: $isTookOutAlertShown) {
+                                    Button("no", role: .cancel) { }
+                                    Button("yes") {
+                                        nextCollection.setNext()
+                                    }
+                                } message: {
+                                    Text("took_out_confirmation")
                                 }
                             }
                             

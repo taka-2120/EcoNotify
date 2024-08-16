@@ -256,6 +256,23 @@
         }
       }
     },
+    "confirmation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "確認"
+          }
+        }
+      }
+    },
     "credits" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -616,6 +633,23 @@
         }
       }
     },
+    "no" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いいえ"
+          }
+        }
+      }
+    },
     "none" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -958,6 +992,23 @@
         }
       }
     },
+    "skip_confirmation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to skip to take out the trash for this time?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今回のゴミ出しはスキップしますか？"
+          }
+        }
+      }
+    },
     "sunday" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1113,6 +1164,23 @@
         }
       }
     },
+    "took_out_confirmation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to mark as taken out?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゴミ出し済みとして記録しますか？"
+          }
+        }
+      }
+    },
     "Trash" : {
       "shouldTranslate" : false
     },
@@ -1262,6 +1330,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ごみ収集"
+          }
+        }
+      }
+    },
+    "yes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はい"
           }
         }
       }
