@@ -103,6 +103,22 @@ public struct ContentView: View {
                                         .buttonStyle(.borderless)
                                     }
                                 }
+                                .alert("confirmation", isPresented: $isSkipAlertShown) {
+                                    Button("no", role: .cancel) { }
+                                    Button("yes") {
+                                        nextCollection.setNext()
+                                    }
+                                } message: {
+                                    Text("skip_confirmation")
+                                }
+                                .alert("confirmation", isPresented: $isTookOutAlertShown) {
+                                    Button("no", role: .cancel) { }
+                                    Button("yes") {
+                                        nextCollection.setNext()
+                                    }
+                                } message: {
+                                    Text("took_out_confirmation")
+                                }
                             }
                             
                             ForEach(Array(trashes.enumerated()), id: \.offset) { index, trash in
