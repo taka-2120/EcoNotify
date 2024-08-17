@@ -9,9 +9,8 @@ import UserNotifications
 import EcoNotifyEntity
 
 public final class NotificationManager {
-    public static func request() async throws {
+    public static func request() async throws -> Bool {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        try await UNUserNotificationCenter.current().requestAuthorization(options: authOptions)
         
         // Define the custom actions.
         let tookOutAction = UNNotificationAction(
@@ -36,6 +35,7 @@ public final class NotificationManager {
                 options: .customDismissAction)
         
         UNUserNotificationCenter.current().setNotificationCategories([trashReminderCategory])
+        return try await UNUserNotificationCenter.current().requestAuthorization(options: authOptions)
     }
     
     public static func scheduleNotification(for id: String, title: String, body: String, on date: DateComponents, repeats: Bool = true) async throws {

@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 import WidgetKit
 import ActivityKit
-import AppTrackingTransparency
 import GoogleMobileAds
 import EcoNotifyEntity
 import EcoNotifyCore
@@ -175,7 +174,6 @@ public struct ContentView: View {
                             nativeAdViewModel.refreshAd()
                         }
                         updateNext()
-                        try await NotificationManager.request()
                         isLoading = false
                     } catch {
                         print(error)
@@ -200,9 +198,6 @@ public struct ContentView: View {
                 }
             }
             .navigationTitle("title")
-            .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
-            }
             .overlay {
                 if nativeAdViewModel.isLoading || isLoading {
                     LoadingView()
