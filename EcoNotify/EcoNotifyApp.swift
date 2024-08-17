@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WhatsNewKit
 import EcoNotifyEntity
 import EcoNotifyFeature
 
@@ -28,6 +29,14 @@ struct EcoNotifyApp: App {
                 }
             }
             .animation(.easeInOut, value: isFirstLaunched)
+            .whatsNewSheet(layout: .default)
+            .environment(
+                \.whatsNew,
+                 WhatsNewEnvironment(
+                    versionStore: UserDefaultsWhatsNewVersionStore(),
+                    whatsNewCollection: self
+                 )
+            )
         }
         .modelContainer(sharedModelContainer)
     }

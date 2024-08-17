@@ -20,6 +20,7 @@
 		9A4A2F4D2C4C9C370011AE77 /* EcoNotifyCore in Resources */ = {isa = PBXBuildFile; fileRef = 9AE88B6D2C49047200B9BC84 /* EcoNotifyCore */; };
 		9A6271A52C70B3C300005D2A /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A6271A42C70B3C300005D2A /* WhatsNewKit */; };
 		9A6271A72C70B41700005D2A /* WhatsNewKit.txt in Sources */ = {isa = PBXBuildFile; fileRef = 9A6271A62C70B40F00005D2A /* WhatsNewKit.txt */; };
+		9A6271A92C70C49600005D2A /* WhatsNewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6271A82C70C48A00005D2A /* WhatsNewCollection.swift */; };
 		9A88FE422C49073D0014BBC0 /* EcoNotifyCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9A88FE412C49073D0014BBC0 /* EcoNotifyCore */; };
 		9A88FE452C49075B0014BBC0 /* EcoNotifyFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 9A88FE442C49075B0014BBC0 /* EcoNotifyFeature */; };
 		9A8B812B2C6AFE9600B31694 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9A8B812A2C6AFE9600B31694 /* GoogleMobileAds */; };
@@ -100,6 +101,7 @@
 		9A4A2F4E2C4C9C9D0011AE77 /* EcoNotifyActivityExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyActivityExtensionDebug.entitlements; sourceTree = "<group>"; };
 		9A4A2F4F2C4C9CA90011AE77 /* EcoNotifyActivityExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyActivityExtensionRelease.entitlements; sourceTree = "<group>"; };
 		9A6271A62C70B40F00005D2A /* WhatsNewKit.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = WhatsNewKit.txt; sourceTree = "<group>"; };
+		9A6271A82C70C48A00005D2A /* WhatsNewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewCollection.swift; sourceTree = "<group>"; };
 		9A88FE4C2C490B190014BBC0 /* EcoNotifyDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyDebug.entitlements; sourceTree = "<group>"; };
 		9A88FE4D2C49173B0014BBC0 /* EcoNotifyWidgetExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyWidgetExtensionDebug.entitlements; sourceTree = "<group>"; };
 		9AD3B9E62C4CB453000FC3CC /* EcoNotifyEntity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EcoNotifyEntity; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				9A88FE4C2C490B190014BBC0 /* EcoNotifyDebug.entitlements */,
 				9A3F61AD2C56A32F00119DB2 /* AppDelegate.swift */,
 				9AEC24AC2C3F624900F148AA /* EcoNotifyApp.swift */,
+				9A6271A82C70C48A00005D2A /* WhatsNewCollection.swift */,
 				9A11DB4D2C48EF4900306012 /* Info.plist */,
 				9AEC24DA2C3F8A8E00F148AA /* Localizable.xcstrings */,
 				9AEC24B22C3F624B00F148AA /* Assets.xcassets */,
@@ -523,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6271A92C70C49600005D2A /* WhatsNewCollection.swift in Sources */,
 				9A3F61AE2C56A33200119DB2 /* AppDelegate.swift in Sources */,
 				9AEC24AD2C3F624900F148AA /* EcoNotifyApp.swift in Sources */,
 				9A6271A72C70B41700005D2A /* WhatsNewKit.txt in Sources */,
