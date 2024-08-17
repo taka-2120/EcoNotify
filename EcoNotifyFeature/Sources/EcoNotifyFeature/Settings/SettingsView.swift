@@ -130,6 +130,11 @@ struct SettingsView: View {
             }
             .navigationTitle("settings")
             .offerCodeRedemption(isPresented: $isOfferCodeSheetShown)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    CircleActionButton()
+                }
+            }
         }
     }
 }
