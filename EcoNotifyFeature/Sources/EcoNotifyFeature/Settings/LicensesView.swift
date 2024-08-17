@@ -16,6 +16,8 @@ struct LicensesView: View {
                 NavigationLink {
                     ScrollView {
                         Text(license.data)
+                            .font(.callout)
+                            .foregroundStyle(Color(.secondaryLabel))
                             .padding()
                     }
                     .navigationTitle(license.rawValue)

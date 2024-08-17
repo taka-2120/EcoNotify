@@ -8,4 +8,5 @@
 public enum Licenses: String, CaseIterable {
     case googleMobileAds = "GoogleMobileAds"
     case googleUserMessagingPlatform = "GoogleUserMessagingPlatform"
+    case whatsNewKit = "WhatsNewKit"
 }
