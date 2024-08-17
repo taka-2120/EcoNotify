@@ -18,6 +18,9 @@
 		9A4A2F362C4C9ABB0011AE77 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A11DB2F2C48BF3B00306012 /* SwiftUI.framework */; };
 		9A4A2F452C4C9ABD0011AE77 /* EcoNotifyActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9A4A2F342C4C9ABB0011AE77 /* EcoNotifyActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A4A2F4D2C4C9C370011AE77 /* EcoNotifyCore in Resources */ = {isa = PBXBuildFile; fileRef = 9AE88B6D2C49047200B9BC84 /* EcoNotifyCore */; };
+		9A6271A52C70B3C300005D2A /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A6271A42C70B3C300005D2A /* WhatsNewKit */; };
+		9A6271A92C70C49600005D2A /* WhatsNewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6271A82C70C48A00005D2A /* WhatsNewCollection.swift */; };
+		9A6271AC2C70C86100005D2A /* WhatsNewKit.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A6271AB2C70C85A00005D2A /* WhatsNewKit.txt */; };
 		9A88FE422C49073D0014BBC0 /* EcoNotifyCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9A88FE412C49073D0014BBC0 /* EcoNotifyCore */; };
 		9A88FE452C49075B0014BBC0 /* EcoNotifyFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 9A88FE442C49075B0014BBC0 /* EcoNotifyFeature */; };
 		9A8B812B2C6AFE9600B31694 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9A8B812A2C6AFE9600B31694 /* GoogleMobileAds */; };
@@ -97,6 +100,8 @@
 		9A4A2F342C4C9ABB0011AE77 /* EcoNotifyActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EcoNotifyActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4A2F4E2C4C9C9D0011AE77 /* EcoNotifyActivityExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyActivityExtensionDebug.entitlements; sourceTree = "<group>"; };
 		9A4A2F4F2C4C9CA90011AE77 /* EcoNotifyActivityExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyActivityExtensionRelease.entitlements; sourceTree = "<group>"; };
+		9A6271A82C70C48A00005D2A /* WhatsNewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewCollection.swift; sourceTree = "<group>"; };
+		9A6271AB2C70C85A00005D2A /* WhatsNewKit.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = WhatsNewKit.txt; sourceTree = "<group>"; };
 		9A88FE4C2C490B190014BBC0 /* EcoNotifyDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyDebug.entitlements; sourceTree = "<group>"; };
 		9A88FE4D2C49173B0014BBC0 /* EcoNotifyWidgetExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoNotifyWidgetExtensionDebug.entitlements; sourceTree = "<group>"; };
 		9AD3B9E62C4CB453000FC3CC /* EcoNotifyEntity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EcoNotifyEntity; sourceTree = "<group>"; };
@@ -168,6 +173,7 @@
 			files = (
 				9A8B812B2C6AFE9600B31694 /* GoogleMobileAds in Frameworks */,
 				9AD3B9EC2C4CB48E000FC3CC /* EcoNotifyEntity in Frameworks */,
+				9A6271A52C70B3C300005D2A /* WhatsNewKit in Frameworks */,
 				9AD6F8BD2C6B855800FC0202 /* StoreKit.framework in Frameworks */,
 				9A88FE452C49075B0014BBC0 /* EcoNotifyFeature in Frameworks */,
 				9A88FE422C49073D0014BBC0 /* EcoNotifyCore in Frameworks */,
@@ -205,6 +211,7 @@
 		9A378D3D2C6F5CA500B94EBB /* Licenses */ = {
 			isa = PBXGroup;
 			children = (
+				9A6271AB2C70C85A00005D2A /* WhatsNewKit.txt */,
 				9A378D3E2C6F5CAC00B94EBB /* GoogleMobileAds.txt */,
 				9A378D3F2C6F5CAC00B94EBB /* GoogleUserMessagingPlatform.txt */,
 			);
@@ -251,6 +258,7 @@
 				9A88FE4C2C490B190014BBC0 /* EcoNotifyDebug.entitlements */,
 				9A3F61AD2C56A32F00119DB2 /* AppDelegate.swift */,
 				9AEC24AC2C3F624900F148AA /* EcoNotifyApp.swift */,
+				9A6271A82C70C48A00005D2A /* WhatsNewCollection.swift */,
 				9A11DB4D2C48EF4900306012 /* Info.plist */,
 				9AEC24DA2C3F8A8E00F148AA /* Localizable.xcstrings */,
 				9AEC24B22C3F624B00F148AA /* Assets.xcassets */,
@@ -435,6 +443,7 @@
 				9A88FE432C49075B0014BBC0 /* XCLocalSwiftPackageReference "EcoNotifyFeature" */,
 				9AD3B9EA2C4CB48E000FC3CC /* XCLocalSwiftPackageReference "EcoNotifyEntity" */,
 				9A8B81292C6AFE9600B31694 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				9A6271A32C70B3C300005D2A /* XCRemoteSwiftPackageReference "WhatsNewKit" */,
 			);
 			productRefGroup = 9AEC24AA2C3F624900F148AA /* Products */;
 			projectDirPath = "";
@@ -476,6 +485,7 @@
 				9AD6F8C42C6B88D900FC0202 /* Products.storekit in Resources */,
 				9A378D402C6F5CAC00B94EBB /* GoogleUserMessagingPlatform.txt in Resources */,
 				9A378D412C6F5CAC00B94EBB /* GoogleMobileAds.txt in Resources */,
+				9A6271AC2C70C86100005D2A /* WhatsNewKit.txt in Resources */,
 				9AEC24B62C3F624B00F148AA /* Preview Assets.xcassets in Resources */,
 				9AEC24B32C3F624B00F148AA /* Assets.xcassets in Resources */,
 				9AEC24DB2C3F8A8E00F148AA /* Localizable.xcstrings in Resources */,
@@ -517,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6271A92C70C49600005D2A /* WhatsNewCollection.swift in Sources */,
 				9A3F61AE2C56A33200119DB2 /* AppDelegate.swift in Sources */,
 				9AEC24AD2C3F624900F148AA /* EcoNotifyApp.swift in Sources */,
 			);
@@ -1043,6 +1054,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9A6271A32C70B3C300005D2A /* XCRemoteSwiftPackageReference "WhatsNewKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/WhatsNewKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
 		9A8B81292C6AFE9600B31694 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
@@ -1054,6 +1073,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9A6271A42C70B3C300005D2A /* WhatsNewKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A6271A32C70B3C300005D2A /* XCRemoteSwiftPackageReference "WhatsNewKit" */;
+			productName = WhatsNewKit;
+		};
 		9A88FE412C49073D0014BBC0 /* EcoNotifyCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EcoNotifyCore;

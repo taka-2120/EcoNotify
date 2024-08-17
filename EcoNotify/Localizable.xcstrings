@@ -1439,6 +1439,72 @@
         }
       }
     },
+    "whats_new_link_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can check the separation information for your local government from this app (only specific region in Japan)."
+          }
+        }
+      }
+    },
+    "whats_new_link_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check the separation information"
+          }
+        }
+      }
+    },
+    "whats_new_notification_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remind you to take out garbage"
+          }
+        }
+      }
+    },
+    "whats_new_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What’s New in Eco Notify"
+          }
+        }
+      }
+    },
+    "whats_new_widget_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can check the collection date just a glance at your Home Screen."
+          }
+        }
+      }
+    },
+    "whats_new_widget_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show collection date on your Home Screen!"
+          }
+        }
+      }
+    },
     "widget_description" : {
       "localizations" : {
         "en" : {
@@ -1503,6 +1569,9 @@
           }
         }
       }
+    },
+    "You can check the collection date just a glance at your Home Screen." : {
+
     }
   },
   "version" : "1.0"
