@@ -12,11 +12,22 @@ import EcoNotifyFeature
 
 @main
 struct EcoNotifyApp: App {
-    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    @AppStorage(Constant.UserDefaultsKey.isFirstLaunched.rawValue)
+    private var isFirstLaunched: Bool = false
+    
+    @UIApplicationDelegateAdaptor
+    private var appDelegate: AppDelegate
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if isFirstLaunched {
+                    ContentView()
+                } else {
+                    WelcomeView()
+                }
+            }
+            .animation(.easeInOut, value: isFirstLaunched)
         }
         .modelContainer(sharedModelContainer)
     }

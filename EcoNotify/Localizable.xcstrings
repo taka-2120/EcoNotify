@@ -86,6 +86,23 @@
         }
       }
     },
+    "approve" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Approve"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可する"
+          }
+        }
+      }
+    },
     "at" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -109,12 +126,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If you want to support the development, would you please buy me just one coffee. A small tip can be a big motivation for me. "
+            "value" : "If you want to support the development, would you please give me just one coffee. A small tip can be a big motivation for me. "
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "このアプリの開発を支援してくださる方へ、一杯のコーヒーを恵んでくださいませんか？"
           }
         }
@@ -273,6 +290,23 @@
         }
       }
     },
+    "continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続ける"
+          }
+        }
+      }
+    },
     "credits" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -290,6 +324,23 @@
         }
       }
     },
+    "denied" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denied"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拒否"
+          }
+        }
+      }
+    },
     "developer" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -303,6 +354,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開発者"
+          }
+        }
+      }
+    },
+    "dive_in" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let’s dive in!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "さあ、はじめましょう！"
           }
         }
       }
@@ -718,6 +786,40 @@
         }
       }
     },
+    "notification_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We will notify you on the specific date before garbage collection."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ごみ収集前の特定の日時に通知を送信します。"
+          }
+        }
+      }
+    },
+    "notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知"
+          }
+        }
+      }
+    },
     "Notify Collection" : {
       "shouldTranslate" : false
     },
@@ -768,6 +870,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "当日"
+          }
+        }
+      }
+    },
+    "permissions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permissions"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用許可"
           }
         }
       }
@@ -1177,6 +1296,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ゴミ出し済みとして記録しますか？"
+          }
+        }
+      }
+    },
+    "tracking" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracking"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トラッキング"
+          }
+        }
+      }
+    },
+    "tracking_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you turn this on, we can display personalized ads in this app. This setting does not affect app behavior."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パーソナライズされた広告を表示するために使用します。この設定はアプリの動作に影響しません。"
           }
         }
       }
