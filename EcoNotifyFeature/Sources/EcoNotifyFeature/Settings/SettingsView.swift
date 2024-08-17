@@ -120,6 +120,11 @@ struct SettingsView: View {
                         Label("version", systemImage: "info.circle")
                         Spacer()
                         Text("1.0.0")
+                            .onTapGesture(count: 7) {
+                                    UserDefaults.standard.set(
+                                        false,
+                                        forKey: Constant.UserDefaultsKey.isFirstLaunched.rawValue)
+                            }
                     }
                 }
             }

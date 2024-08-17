@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-import EcoNotifyCore
 import AppTrackingTransparency
+import EcoNotifyEntity
+import EcoNotifyCore
 
 struct PermissionView: View {
     
@@ -56,8 +57,10 @@ struct PermissionView: View {
             
             Spacer()
             
-            NavigationLink {
-                PermissionView()
+            Button {
+                UserDefaults.standard.set(
+                    true,
+                    forKey: Constant.UserDefaultsKey.isFirstLaunched.rawValue)
             } label: {
                 Text("dive_in")
                     .padding()

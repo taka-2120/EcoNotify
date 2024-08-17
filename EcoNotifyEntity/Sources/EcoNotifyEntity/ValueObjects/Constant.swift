@@ -31,4 +31,8 @@ public enum Constant {
         case portfolio = "https://yu-dev.vercel.app/"
         case buyMeACoffee = "buymeacoffee.com/yutakahashi"
     }
+    
+    public enum UserDefaultsKey: String {
+        case isFirstLaunched = "isFirstLaunchedKey"
+    }
 }

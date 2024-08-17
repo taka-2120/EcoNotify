@@ -86,13 +86,13 @@
         }
       }
     },
-    "approved" : {
+    "approve" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Approved"
+            "value" : "Approve"
           }
         },
         "ja" : {
